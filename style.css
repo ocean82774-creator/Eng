@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 414px;
+    max-height: 896px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* 시작 화면 스타일 */
+#start-screen {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.description p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ready-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* 버튼 스타일 */
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Noto Sans KR', sans-serif;
+    min-width: 200px;
+}
+
+.btn.primary {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(255, 107, 107, 0.4);
+}
+
+.btn.secondary {
+    background: linear-gradient(45deg, #74b9ff, #0984e3);
+    color: white;
+    box-shadow: 0 8px 20px rgba(116, 185, 255, 0.3);
+}
+
+.btn.secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(116, 185, 255, 0.4);
+}
+
+/* 문제 화면 스타일 */
+#question-screen {
+    padding: 0;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.question-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.question-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #2d3436;
+}
+
+.options {
+    margin-bottom: 2rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.option:hover {
+    border-color: #667eea;
+    background: #e8f4fd;
+}
+
+.option.selected {
+    border-color: #667eea;
+    background: #e8f4fd;
+}
+
+.option-number {
+    width: 40px;
+    height: 40px;
+    background: #667eea;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.option-text {
+    font-size: 1.1rem;
+    color: #2d3436;
+    flex: 1;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.answer-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* 결과 영역 스타일 */
+.result-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.result-area.hidden {
+    display: none;
+}
+
+.result-message {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2d3436;
+}
+
+.explanation {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #636e72;
+    max-width: 90%;
+}
+
+.result-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* 실패 애니메이션 */
+.fail-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.fail-animation.hidden {
+    display: none;
+}
+
+.fail-image {
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    width: 80px;
+    height: 80px;
+    animation: flyRight 4s ease-in-out;
+}
+
+@keyframes flyRight {
+    0% {
+        left: -100px;
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+/* 결과 화면 스타일 */
+#result-screen {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.final-message {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.4;
+}
+
+.certificate {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 414px) {
+    #game-container {
+        border-radius: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .question-text {
+        font-size: 1.1rem;
+    }
+    
+    .option-text {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.screen.active {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 축포 애니메이션 (1문제 정답 시) */
+@keyframes confetti {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff6b6b;
+    animation: confetti 3s linear infinite;
+}
+
+.confetti:nth-child(2n) {
+    background: #74b9ff;
+    animation-delay: 0.5s;
+}
+
+.confetti:nth-child(3n) {
+    background: #fdcb6e;
+    animation-delay: 1s;
+}
+
+.confetti:nth-child(4n) {
+    background: #00b894;
+    animation-delay: 1.5s;
+}

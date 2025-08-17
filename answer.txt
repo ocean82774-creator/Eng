@@ -1,0 +1,190 @@
+1번 (정답: ③ adverse)
+
+문장
+The rescue team had to delay operations due to ( ) weather conditions in the mountains.
+해석
+구조대는 산에서의 ( ) 기상 조건 때문에 작전을 지연해야 했다.
+정답 해설
+
+adverse: 불리한, 좋지 않은.
+오답 해설
+
+unfavorable: 불리한
+
+favorable: 유리한, 호의적인
+
+unpredictable: 예측할 수 없는
+
+disadvantageous: 불리한
+
+
+2번 (정답: ② alleviate)
+
+문장
+The government launched a program to ( ) the suffering of low-income families.
+해석
+정부는 저소득 가정의 고통을 ( )하기 위해 프로그램을 시작했다.
+정답 해설
+
+alleviate: 완화하다.
+오답 해설
+
+aggravate: 악화시키다
+
+intensify: 강화하다
+
+maintain: 유지하다
+
+prolong: 연장하다
+
+3번 (정답: ① ambiguous)
+
+문장
+The contract was canceled because several clauses were ( ) and open to misinterpretation.
+해석
+계약은 몇몇 조항들이 ( )하고 오해의 소지가 있어 취소되었다.
+정답 해설
+
+ambiguous: 애매모호한.
+오답 해설
+
+precise: 정확한
+
+equivocal: 애매한 (중의적 의미 강조)
+
+unclear: 불명확한
+
+indefinite: 무기한의, 막연한
+
+4번 (정답: ① analogy)
+
+문장
+The teacher explained the nervous system by drawing an ( ) between a cell and a factory.
+해석
+교사는 세포와 공장을 ( ) 지어 신경계를 설명했다.
+정답 해설
+
+analogy: 비유, 유추.
+오답 해설
+
+assumption: 가정
+
+comparison: 비교
+
+metaphor: 은유
+
+illustration: 설명, 삽화
+
+5번 (정답: ① anonymous)
+
+문장
+The charity received a large donation from an ( ) benefactor who refused to be named.
+해석
+그 자선단체는 이름 밝히기를 거부한 ( ) 후원자로부터 큰 기부금을 받았다.
+정답 해설
+
+anonymous: 익명의.
+오답 해설
+
+confidential: 기밀의
+
+incognito: 익명으로, 신분을 숨기고
+
+nameless: 이름 없는
+
+unidentified: 신원 미상의
+
+6번 (정답: ① apparatus)
+
+문장
+The laboratory is equipped with state-of-the-art ( ) for genetic research.
+해석
+그 연구소는 유전 연구를 위한 첨단 ( )을 갖추고 있다.
+정답 해설
+
+apparatus: 장치, 기구.
+오답 해설
+
+implement: 도구
+
+contraption: 기묘한 장치
+
+appliance: 가전제품
+
+mechanism: 기계 장치, 구조
+
+7번 (정답: ① arbitrary)
+
+문장
+The judge condemned the decision as ( ) and lacking any legal basis.
+해석
+판사는 그 결정을 ( )하고 법적 근거가 부족하다고 비난했다.
+정답 해설
+
+arbitrary: 임의적인, 자의적인.
+오답 해설
+
+subjective: 주관적인
+
+capricious: 변덕스러운
+
+inconsistent: 일관성 없는
+
+irrational: 비합리적인
+
+8번 (정답: ① articulate)
+
+문장
+During the presentation, she managed to ( ) her ideas clearly and persuasively.
+해석
+발표 중 그녀는 자신의 생각을 명확하고 설득력 있게 ( )할 수 있었다.
+정답 해설
+
+articulate: 분명히 표현하다.
+오답 해설
+
+enunciate: 또렷하게 발음하다
+
+voice: 말하다
+
+outline: 개요를 말하다
+
+portray: 묘사하다
+
+9번 (정답: ① aspire)
+
+문장
+Many young entrepreneurs ( ) to revolutionize the technology industry.
+해석
+많은 젊은 기업가들이 기술 산업에 혁신을 일으키기를 ( )한다.
+정답 해설
+
+aspire: 열망하다.
+오답 해설
+
+aim: 목표하다
+
+strive: 노력하다
+
+long: 갈망하다
+
+yearn: 갈망하다
+
+10번 (정답: ① assumption)
+
+문장
+The entire strategy rests on the ( ) that consumer demand will continue to rise.
+해석
+전체 전략은 소비자 수요가 계속 증가할 것이라는 ( )에 기반하고 있다.
+정답 해설
+
+assumption: 가정, 추정.
+오답 해설
+
+hypothesis: 가설
+
+premise: 전제
+
+presumption: 추정
+
+postulate: 가정, 전제

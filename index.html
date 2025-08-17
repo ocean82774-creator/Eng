@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수능 어휘 테스트 게임</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- 장면 1: 게임 시작 화면 -->
+        <div id="start-screen" class="screen active">
+            <div class="content">
+                <h1 class="title">수능어휘 테스트 게임!</h1>
+                <div class="description">
+                    <p>👉 "총 3문제가 출제되며,</p>
+                    <p>맞춘 문제 수에 따라</p>
+                    <p>각기 다른 인증서가 발급됩니다!</p>
+                </div>
+                <p class="ready-text">준비되면 시작 버튼을 눌러주세요!</p>
+                <button id="start-btn" class="btn primary">시작하기 ▶️</button>
+            </div>
+        </div>
+
+        <!-- 장면 2: 문제 출제 및 입력 -->
+        <div id="question-screen" class="screen">
+            <div class="header">
+                <div class="score">정답: <span id="current-score">0</span>/3</div>
+            </div>
+            
+            <div class="question-content">
+                <div id="question-text" class="question-text"></div>
+                <div class="options">
+                    <div class="option" data-option="1">
+                        <span class="option-number">1</span>
+                        <span class="option-text" id="option1"></span>
+                    </div>
+                    <div class="option" data-option="2">
+                        <span class="option-number">2</span>
+                        <span class="option-text" id="option2"></span>
+                    </div>
+                    <div class="option" data-option="3">
+                        <span class="option-number">3</span>
+                        <span class="option-text" id="option3"></span>
+                    </div>
+                    <div class="option" data-option="4">
+                        <span class="option-number">4</span>
+                        <span class="option-text" id="option4"></span>
+                    </div>
+                    <div class="option" data-option="5">
+                        <span class="option-number">5</span>
+                        <span class="option-text" id="option5"></span>
+                    </div>
+                </div>
+                
+                <div class="input-section">
+                    <input type="number" id="answer-input" min="1" max="5" placeholder="정답 번호 입력" class="answer-input">
+                    <button id="submit-btn" class="btn primary">확인</button>
+                </div>
+            </div>
+
+            <!-- 결과 표시 영역 -->
+            <div id="result-area" class="result-area hidden">
+                <div id="result-message" class="result-message"></div>
+                <div id="explanation" class="explanation"></div>
+                <div class="result-buttons">
+                    <button id="next-btn" class="btn primary">다음문제 🔁</button>
+                    <button id="home-btn" class="btn secondary">홈으로 🏠</button>
+                </div>
+            </div>
+
+            <!-- 실패 애니메이션 -->
+            <div id="fail-animation" class="fail-animation hidden">
+                <img src="assets/ggg.png" alt="실패" class="fail-image">
+            </div>
+        </div>
+
+        <!-- 장면 3: 결과 화면 -->
+        <div id="result-screen" class="screen">
+            <div class="content">
+                <div id="final-message" class="final-message"></div>
+                <div id="certificate" class="certificate"></div>
+                
+                <div class="result-buttons">
+                    <button id="save-btn" class="btn primary">상장 저장하기 💾</button>
+                    <button id="final-home-btn" class="btn secondary">홈으로 🏠</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 오디오 요소들 -->
+    <audio id="success-sound" src="assets/Ascending 3.mp3"></audio>
+    <audio id="fail-sound" src="assets/fail_02.mp3"></audio>
+    <audio id="final-success-sound" src="assets/suc_01.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
